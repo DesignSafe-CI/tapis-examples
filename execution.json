@@ -1,0 +1,135 @@
+{
+    "maxSystemJobs": 50,
+    "executionType": "HPC",
+    "description": "Stampede2 system for taccster",
+    "storage": {
+        "proxy": null,
+        "protocol": "SFTP",
+        "mirror": false,
+        "port": 22,
+        "auth": {
+            "type": "SSHKEYS",
+            "username": "sal",
+            "publicKey": "$SSH_PUB_KEY",
+            "privateKey": "$SSH_PRIV_KEY"
+        },
+        "host": "stampede2.tacc.utexas.edu",
+        "rootDir": "/",
+        "homeDir": "/work/05089/sal/stampede2/taccster"
+    },
+    "type": "EXECUTION",
+    "login": {
+        "proxy": null,
+        "protocol": "SSH",
+        "port": 22,
+        "auth": {
+            "type": "SSHKEYS",
+            "username": "sal",
+            "publicKey": "$SSH_PUB_KEY",
+            "privateKey": "$SSH_PRIV_KEY"
+        },
+        "host": "stampede2.tacc.utexas.edu"
+    },
+    "startupScript": "./bashrc",
+    "scheduler": "SLURM",
+    "maxSystemJobsPerUser": 4,
+    "id": "sal.taccster.exec.stampede2",
+    "workDir": "/work/05089/sal/stampede2/taccster",
+    "site": "utrc.tacc.utexas.edu",
+    "environment": null,
+    "queues": [
+        {
+            "maxJobs": 25,
+            "maxMemoryPerNode": 192,
+            "default": false,
+            "maxRequestedTime": "48:00:00",
+            "name": "skx-normal",
+            "description": null,
+            "maxNodes": 128,
+            "maxProcessorsPerNode": 6144,
+            "mappedName": null,
+            "maxUserJobs": -1,
+            "customDirectives": "-A TACC-ACI"
+        },
+        {
+            "maxJobs": 5,
+            "maxMemoryPerNode": 96,
+            "default": false,
+            "maxRequestedTime": "48:00:00",
+            "name": "large",
+            "description": null,
+            "maxNodes": 2046,
+            "maxProcessorsPerNode": 139264,
+            "mappedName": null,
+            "maxUserJobs": -1,
+            "customDirectives": "-A TACC-ACI"
+        },
+        {
+            "maxJobs": 1,
+            "maxMemoryPerNode": 192,
+            "default": false,
+            "maxRequestedTime": "02:00:00",
+            "name": "skx-dev",
+            "description": null,
+            "maxNodes": 4,
+            "maxProcessorsPerNode": 192,
+            "mappedName": null,
+            "maxUserJobs": -1,
+            "customDirectives": "-A TACC-ACI"
+        },
+        {
+            "maxJobs": 50,
+            "maxMemoryPerNode": 96,
+            "default": true,
+            "maxRequestedTime": "48:00:00",
+            "name": "normal",
+            "description": null,
+            "maxNodes": 256,
+            "maxProcessorsPerNode": 17408,
+            "mappedName": null,
+            "maxUserJobs": 5,
+            "customDirectives": "-A TACC-ACI"
+        },
+        {
+            "maxJobs": 3,
+            "maxMemoryPerNode": 192,
+            "default": false,
+            "maxRequestedTime": "48:00:00",
+            "name": "skx-large",
+            "description": null,
+            "maxNodes": 865,
+            "maxProcessorsPerNode": 41664,
+            "mappedName": null,
+            "maxUserJobs": -1,
+            "customDirectives": "-A TACC-ACI"
+        },
+        {
+            "maxJobs": 1,
+            "maxMemoryPerNode": 96,
+            "default": false,
+            "maxRequestedTime": "02:00:00",
+            "name": "development",
+            "description": null,
+            "maxNodes": 4,
+            "maxProcessorsPerNode": 272,
+            "mappedName": null,
+            "maxUserJobs": 1,
+            "customDirectives": "-A TACC-ACI"
+        },
+        {
+            "maxJobs": 4,
+            "maxMemoryPerNode": 96,
+            "default": false,
+            "maxRequestedTime": "48:00:00",
+            "name": "flat-quadrant",
+            "description": null,
+            "maxNodes": 32,
+            "maxProcessorsPerNode": 2176,
+            "mappedName": null,
+            "maxUserJobs": -1,
+            "customDirectives": "-A TACC-ACI"
+        }
+    ],
+    "name": "Stampede2 SLURM Execution Host",
+    "scratchDir": "/scratch/05089/sal"
+}

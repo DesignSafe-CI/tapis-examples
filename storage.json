@@ -1,0 +1,25 @@
+{
+    "owner": "sal",
+    "available": true,
+    "description": "Storage System for taccster",
+    "storage": {
+        "proxy": null,
+        "protocol": "SFTP",
+        "mirror": false,
+        "port": 22,
+        "auth": {
+            "type": "SSHKEYS",
+            "username": "sal",
+            "publicKey": "$SSH_PUB_KEY",
+            "privateKey": "$SSH_PRIV_KEY"
+        },
+        "publicAppsDir": null,
+        "host": "stampede2.tacc.utexas.edu",
+        "rootDir": "/work/05089/sal/stampede2/taccster",
+        "homeDir": "/"
+    },
+    "type": "STORAGE",
+    "site": "utrc.tacc.utexas.edu",
+    "name": "sal.taccster.storage.stampede2",
+    "id": "sal.taccster.storage.stampede2"
+}

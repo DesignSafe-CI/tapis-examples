@@ -1,0 +1,7 @@
+{
+    "name": "hello-world_test",
+    "appId": "hello-world-0.1",
+    "archive": true,
+    "archiveSystem": "sal.taccster.exec.stampede2",
+    "archivePath": "archive"
+}
